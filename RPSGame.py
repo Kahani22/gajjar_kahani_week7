@@ -4,6 +4,10 @@ from random import randint
 choices = ["Rock", "Paper", "Scissors"]
 player = False
 
+player_lives = 5
+computer_lives = 5
+
+
 # make the computer pick one item at random
 computer = choices[randint(0, 2)]
 
@@ -43,5 +47,35 @@ while player is False:
     else:
         print("Not a valid option. Check again, and check your spelling!\n")
 
+        #checking win/lose
+        if player_lives is 0:
+            print("Zero lives, play again?")
+
+            choice = input("Y / N? ")
+
+            if choice == "Y" or choice == "y":
+                player_lives = 5
+                computer_lives = 5
+                player = False
+                computer = choices[randint(0,2)]
+            elif choice == "N" or choice =="n":
+                print("you've had enough losing")
+                exit()
+
+                if computer_lives is 0:
+            print("computer out of lives, play again?")
+
+            choice = input("Y / N? ")
+
+            if choice == "Y" or choice == "y":
+                player_lives = 5
+                computer_lives = 5
+                player = False
+                computer = choices[randint(0,2)]
+            elif choice == "N" or choice =="n":
+                print("you've had enough losing")
+                exit()
+
     player = False
     computer = choices[randint(0, 2)]
+
