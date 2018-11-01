@@ -80,7 +80,7 @@ while player is False:
     else:
         print("Not a valid option. Check again, and check your spelling!\n")
 
-        # checking win/lose
+        # checking win/lose and functions
     if player_lives == 0:
             winorlose("lost")
     elif computer_lives == 0:
